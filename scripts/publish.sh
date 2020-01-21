@@ -38,7 +38,8 @@ eu-west-3
 eu-north-1
 "
 
-classic_regions_account_id="906394416424"
+#classic_regions_account_id="906394416424"
+classic_regions_account_id="803860917211"
 
 cn_regions="
 cn-north-1
