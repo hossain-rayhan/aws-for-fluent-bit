@@ -101,10 +101,10 @@ publish_to_docker_hub() {
 }
 
 publish_ssm() {
-	aws ssm put-parameter --name /aws/service/aws-for-fluent-bit/${AWS_FOR_FLUENT_BIT_VERSION} --overwrite \
+	aws ssm put-parameter --name /test/service/aws-for-fluent-bit/${AWS_FOR_FLUENT_BIT_VERSION} --overwrite \
 		--description 'Regional Amazon ECR Image URI for the latest AWS for Fluent Bit Docker Image' \
 		--type String --region ${1} --value ${2}:${AWS_FOR_FLUENT_BIT_VERSION}
-	aws ssm put-parameter --name /aws/service/aws-for-fluent-bit/latest --overwrite \
+	aws ssm put-parameter --name /test/service/aws-for-fluent-bit/latest --overwrite \
 		--description 'Regional Amazon ECR Image URI for the latest AWS for Fluent Bit Docker Image' \
 		--type String --region ${1} --value ${2}:latest
 }
