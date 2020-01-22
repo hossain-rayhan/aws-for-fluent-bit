@@ -418,7 +418,7 @@ if [ "${1}" = "cicd-publish" ]; then
 	elif [ "${2}" = "${hongkong_region}" ]; then
 		sync_latest_image ${hongkong_region} ${hongkong_account_id}
 	else
-		publish_ecr "${2}" ${classic_regions_account_id}
+		sync_latest_image "${2}" ${classic_regions_account_id}
 	fi
 fi
 
