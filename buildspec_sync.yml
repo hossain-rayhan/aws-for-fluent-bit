@@ -10,10 +10,6 @@ phases:
     commands:
       - './scripts/publish.sh cicd-publish ${AWS_REGION}'
 
-      - export AWS_ACCESS_KEY_ID=
-      - export AWS_SECRET_ACCESS_KEY=
-      - export AWS_SESSION_TOKEN=
-      
       # Assume role to verify, get the credentials, and set them as environment variables.
       # Verification should be done using the credentials from a different account. It ensures that
       # the images we published are public and accessible from any account.
